@@ -1,0 +1,83 @@
+.scrollWrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: var(--space-4) 0 var(--space-8);
+  /* Hide scrollbar for a cleaner look but still scrollable */
+  scrollbar-width: none; 
+}
+.scrollWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.cardContainer {
+  display: flex;
+  gap: var(--space-6);
+  /* Ensure it doesn't wrap on thin screens so user scrolls */
+  width: max-content;
+  padding: 0 var(--space-2);
+}
+
+.card {
+  width: 280px;
+  padding: var(--space-6);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease;
+  overflow: hidden; /* For smooth expanding */
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+}
+
+.cardActive {
+  background: rgba(31, 35, 43, 0.9);
+  border-color: var(--color-primary-light);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-4);
+  line-height: 1;
+}
+
+.card h3 {
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-1);
+}
+
+.enTitle {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--color-primary-light);
+  margin-bottom: var(--space-4);
+}
+
+.expandedContent {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  overflow: hidden;
+}
+
+.moreLink {
+  display: inline-block;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: var(--space-8);
+  transition: color 0.2s ease;
+}
+
+.moreLink:hover {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-6 {
+  margin-top: var(--space-6);
+}
