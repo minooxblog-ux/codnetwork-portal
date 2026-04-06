@@ -9,26 +9,31 @@
     "startFree": "Start for Free"
   },
   "Footer": {
-    "desc": "The comprehensive platform for e-commerce entrepreneurs. We manage your logistics from factory to customer.",
-    "links": "Quick Links",
+    "tagline": "The comprehensive e-commerce logistics platform. From factory to customer's door.",
+    "company": "Company",
+    "resources": "Resources",
+    "contact": "Contact",
     "about": "About Us",
-    "services": "Services",
-    "contact": "Contact Us",
+    "services": "Our Services",
+    "tech": "Technology",
+    "pricing": "Pricing",
     "faq": "FAQ",
-    "models": "Business Models",
+    "cases": "Case Studies",
     "blog": "Blog",
-    "rights": "COD Network. All Rights Reserved © 2026."
+    "contactUs": "Contact Us",
+    "rights": "All Rights Reserved."
   },
   "Hero": {
+    "badge": "E-commerce Logistics Platform",
     "headlinePrefix": "Empowering everyone to start, grow, and scale their",
     "headlineGradient": "E-commerce Empire",
     "headlineSuffix": "in the Middle East, Africa, and beyond 🚀",
     "subtitle": "COD Network is your trusted logistics partner. From the factory to the customer's door, we take care of everything. You focus on what you do best: selling and marketing! 💼",
     "btnPrimary": "Start for Free Now",
     "btnSecondary": "Watch the Demo Video ▷",
-    "trustText": "⭐ Trusted by 20,000+ merchants",
-    "integrateText": "⚡ Integrated with 10+ platforms",
-    "deliveryText": "🌍 Delivery to 9 countries"
+    "trustText": "Trusted by 20,000+ merchants",
+    "integrateText": "Integrated with 10+ platforms",
+    "deliveryText": "Delivery to 9 countries"
   },
   "Stats": {
     "clients": "Satisfied Clients",
@@ -42,6 +47,7 @@
   "ProblemSolution": {
     "titlePrefix": "All these problems...",
     "titleGradient": "Solved Simply!",
+    "subtitle": "We've built the complete solution so merchants can focus on growth, not logistics.",
     "colProblemTitle": "Current Merchant Problems",
     "colSolutionTitle": "COD Network Solution",
     "p1": "Multiple exhaustive suppliers",
