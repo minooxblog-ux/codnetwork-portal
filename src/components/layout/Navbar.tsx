@@ -2,6 +2,8 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/routing';
+import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -9,6 +11,10 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations('Navbar');
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const switchLanguage = () => {
     const nextLocale = locale === 'ar' ? 'en' : locale === 'en' ? 'ru' : 'ar';
@@ -33,6 +39,11 @@ export default function Navbar() {
         </div>
 
         <div className={styles.actions}>
+          {mounted && (
+            <button className={styles.langToggle} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} aria-label="Toggle Theme">
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+          )}
           <button className={styles.langToggle} onClick={switchLanguage}>
             {locale.toUpperCase()}
           </button>
