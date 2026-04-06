@@ -23,13 +23,12 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar}>
-      <div className={`container ${styles.navContainer}`}>
-        <div className={styles.logo}>
-          <Link href="/">
-            <span className={styles.logoIcon}>▲</span> COD Network
-          </Link>
-        </div>
-        
+      <div className={styles.navInner}>
+        <Link href="/" className={styles.logo}>
+          <span className={styles.logoIcon}>▲</span>
+          COD Network
+        </Link>
+
         <div className={styles.links}>
           <Link href="/about" className={styles.link}>{t('about')}</Link>
           <Link href="/services" className={styles.link}>{t('services')}</Link>
@@ -40,7 +39,11 @@ export default function Navbar() {
 
         <div className={styles.actions}>
           {mounted && (
-            <button className={styles.langToggle} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} aria-label="Toggle Theme">
+            <button
+              className={styles.langToggle}
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              aria-label="Toggle Theme"
+            >
               {theme === 'dark' ? '☀️' : '🌙'}
             </button>
           )}

@@ -7,51 +7,73 @@ export default function Hero() {
   const t = useTranslations('Hero');
   return (
     <section className={styles.hero}>
-      <div className={styles.background}>
-        <div className={styles.blob1}></div>
-        <div className={styles.blob2}></div>
-      </div>
+      {/* Animated background blobs */}
+      <div className={styles.blob1} />
+      <div className={styles.blob2} />
+      <div className={styles.blob3} />
+      {/* Grid overlay */}
+      <div className={styles.grid} />
+
       <div className={`container ${styles.content}`}>
-        <motion.h1 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="headline"
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className={styles.badgeWrap}
         >
-          {t('headlinePrefix')}<br/>
-          <span className="text-gradient">{t('headlineGradient')}</span><br/> {t('headlineSuffix')}
+          <span className="badge">🌍 {t('badge')}</span>
+        </motion.div>
+
+        {/* Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className={`headline ${styles.h1}`}
+        >
+          {t('headlinePrefix')}<br />
+          <span className="text-gradient">{t('headlineGradient')}</span>
+          <br />{t('headlineSuffix')}
         </motion.h1>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className={styles.subtitle}
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.25 }}
+          className={`subheadline ${styles.subtitle}`}
         >
           {t('subtitle')}
         </motion.p>
-        
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className={styles.actions}
         >
-          <button className="btn-primary" style={{padding: '1rem 2.5rem', fontSize: '1.1rem'}}>{t('btnPrimary')}</button>
-          <button className={styles.btnSecondary}>{t('btnSecondary')}</button>
+          <button className="btn-primary">{t('btnPrimary')} →</button>
+          <button className="btn-outline">{t('btnSecondary')}</button>
         </motion.div>
-        
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className={`glass-panel ${styles.trustRibbon}`}
+
+        {/* Trust Ribbon */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.65 }}
+          className={styles.trustRibbon}
         >
-          <span>{t('trustText')}</span>
-          <span className={styles.dot}>•</span>
-          <span>{t('integrateText')}</span>
-          <span className={styles.dot}>•</span>
-          <span>{t('deliveryText')}</span>
+          <div className={styles.trustItem}>
+            <span className={styles.trustNum}>+2000</span>
+            <span className={styles.trustLabel}>{t('trustText')}</span>
+          </div>
+          <div className={styles.trustDivider} />
+          <div className={styles.trustItem}>
+            <span className={styles.trustNum}>6</span>
+            <span className={styles.trustLabel}>{t('integrateText')}</span>
+          </div>
+          <div className={styles.trustDivider} />
+          <div className={styles.trustItem}>
+            <span className={styles.trustNum}>24h</span>
+            <span className={styles.trustLabel}>{t('deliveryText')}</span>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -1,51 +1,68 @@
 .flowContainer {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-8);
-  margin-top: var(--space-8);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3.5rem;
+  position: relative;
+}
+
+/* Connector lines between cards (desktop only) */
+@media (min-width: 900px) {
+  .flowContainer::after {
+    content: '';
+    position: absolute;
+    top: 3.5rem;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light), var(--primary));
+    opacity: 0.25;
+    pointer-events: none;
+  }
 }
 
 .stepCard {
-  flex: 1;
-  max-width: 320px;
-  padding: var(--space-8);
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
   text-align: center;
   position: relative;
+  transition: all 0.3s ease;
+}
+
+.stepCard:hover {
+  border-color: rgba(255,123,0,0.3);
+  box-shadow: 0 16px 40px rgba(255,123,0,0.08);
+  transform: translateY(-6px);
 }
 
 .icon {
   font-size: 3rem;
-  margin-bottom: var(--space-4);
-  background: var(--color-background-dark);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--space-4) auto;
-  border: 1px solid var(--color-border);
+  display: block;
+  margin-bottom: 1.25rem;
 }
 
 .stepCard h3 {
-  font-family: var(--font-headline);
-  font-size: 1.5rem;
-  margin-bottom: var(--space-2);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
 }
 
 .stepCard p {
-  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
 }
 
 .timeInfo {
-  color: var(--color-primary-light);
-  font-weight: 500;
-  margin-bottom: var(--space-4);
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .flowContainer {
-    flex-direction: column;
-    align-items: center;
-  }
+.timeInfo strong {
+  color: var(--primary);
 }
