@@ -1,18 +1,21 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import styles from './FlowSection.module.css';
 
-const steps = [
-  { num: "1️⃣", title: "سجل حسابك", desc: "أنشئ حسابك مجاناً (بريد + كلمة سر)" },
-  { num: "2️⃣", title: "اختر نموذج العمل", desc: "اختر البائع أو المسوق واستقبل تفاصيل البرنامج" },
-  { num: "3️⃣", title: "ابدأ البيع", desc: "اربح المال فوراً من اليوم الأول" }
-];
-
 export default function FlowSection() {
+  const t = useTranslations('Flow');
+
+  const steps = [
+    { num: "1️⃣", title: t('s1Title'), desc: t('s1Desc') },
+    { num: "2️⃣", title: t('s2Title'), desc: t('s2Desc') },
+    { num: "3️⃣", title: t('s3Title'), desc: t('s3Desc') }
+  ];
+
   return (
     <section className="section">
       <div className="container">
-        <h2 className="headline" style={{textAlign: 'center'}}>ابدأ في 3 خطوات فقط</h2>
+        <h2 className="headline" style={{textAlign: 'center'}}>{t('title')}</h2>
         
         <div className={styles.flowContainer}>
           {steps.map((s, i) => (
@@ -32,8 +35,8 @@ export default function FlowSection() {
         </div>
         
         <div style={{textAlign: 'center', marginTop: '3rem'}}>
-          <p className={styles.timeInfo}>⏱️ يستغرق دقيقة واحدة فقط!</p>
-          <button className="btn-primary" style={{marginTop: '1rem'}}>ابدأ الآن - مجاناً 100%</button>
+          <p className={styles.timeInfo}>{t('timeInfo')}</p>
+          <button className="btn-primary" style={{marginTop: '1rem'}}>{t('btnStart')}</button>
         </div>
       </div>
     </section>

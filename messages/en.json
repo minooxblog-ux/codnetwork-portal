@@ -1,5 +1,137 @@
 {
-  "Index": {
-    "title": "COD Network | We enable everyone to start and scale"
+  "Navbar": {
+    "about": "About Us",
+    "services": "Services",
+    "businessModels": "Business Models",
+    "tech": "Technology",
+    "pricing": "Pricing",
+    "login": "Login",
+    "startFree": "Start for Free"
+  },
+  "Footer": {
+    "desc": "The comprehensive platform for e-commerce entrepreneurs. We manage your logistics from factory to customer.",
+    "links": "Quick Links",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact Us",
+    "faq": "FAQ",
+    "models": "Business Models",
+    "blog": "Blog",
+    "rights": "COD Network. All Rights Reserved © 2026."
+  },
+  "Hero": {
+    "headlinePrefix": "Empowering everyone to start, grow, and scale their",
+    "headlineGradient": "E-commerce Empire",
+    "headlineSuffix": "in the Middle East, Africa, and beyond 🚀",
+    "subtitle": "COD Network is your trusted logistics partner. From the factory to the customer's door, we take care of everything. You focus on what you do best: selling and marketing! 💼",
+    "btnPrimary": "Start for Free Now",
+    "btnSecondary": "Watch the Demo Video ▷",
+    "trustText": "⭐ Trusted by 20,000+ merchants",
+    "integrateText": "⚡ Integrated with 10+ platforms",
+    "deliveryText": "🌍 Delivery to 9 countries"
+  },
+  "Stats": {
+    "clients": "Satisfied Clients",
+    "orders": "Monthly Orders",
+    "success": "Success Rate",
+    "countries": "Countries",
+    "continents": "Continents",
+    "support": "Live Support",
+    "partnersTitle": "Trusted Partners:"
+  },
+  "ProblemSolution": {
+    "titlePrefix": "All these problems...",
+    "titleGradient": "Solved Simply!",
+    "colProblemTitle": "Current Merchant Problems",
+    "colSolutionTitle": "COD Network Solution",
+    "p1": "Multiple exhaustive suppliers",
+    "s1": "One trusted supplier",
+    "p2": "Slow & unsafe delivery companies",
+    "s2": "Guaranteed fast & secure shipping",
+    "p3": "Manual order confirmation (cost)",
+    "s3": "Professional Call Centers",
+    "p4": "Extremely high return rate",
+    "s4": "95% Confirmation Rate",
+    "p5": "Complex money collection",
+    "s5": "Instant Digital Wallet",
+    "p6": "No visibility on performance",
+    "s6": "Smart Dashboard"
+  },
+  "Services": {
+    "title": "Our Services at a Glance",
+    "sourcing": "Sourcing",
+    "sourcingEn": "SOURCING",
+    "sourcingDesc": "We find the best suppliers and factories for you. Quality inspection, best prices, and flexible payment terms.",
+    "customs": "Customs Clearance",
+    "customsEn": "CUSTOMS",
+    "customsDesc": "Our team handles all complexities. Customs letters, inspections, permits - 100% legally compliant.",
+    "warehouse": "Warehousing",
+    "warehouseEn": "WAREHOUSE",
+    "warehouseDesc": "Modern warehouses with cooling systems and security. Your inventory is safe and protected.",
+    "callCenter": "Call Centers",
+    "callCenterEn": "CALL CENTER",
+    "callCenterDesc": "Local dialect speaking staff. They confirm, upsell, and handle objections efficiently.",
+    "shipping": "Shipping & Delivery",
+    "shippingEn": "SHIPPING",
+    "shippingDesc": "Same-day fast delivery in select areas. Real-time tracking and professional drivers.",
+    "remittance": "Money Remittance",
+    "remittanceEn": "COD REMITTANCE",
+    "remittanceDesc": "Receive your profits instantly. Secure digital wallet and quick transfers without hidden fees.",
+    "more": "View More about Our Services ←"
+  },
+  "ModelsPreview": {
+    "title": "Business Models",
+    "sellerTitle": "Seller Model",
+    "sellerModel": "(Seller Model)",
+    "sellerF1": "Own your products",
+    "sellerF2": "Full commission on sales",
+    "sellerF3": "Build your brand",
+    "sellerBtn": "Start as a Seller",
+    "affiliateTitle": "Affiliate Marketer Model",
+    "affiliateModel": "(Affiliate Model)",
+    "affiliateF1": "No inventory needed",
+    "affiliateF2": "Zero responsibilities",
+    "affiliateF3": "Start with $0 instantly",
+    "affiliateBtn": "Start as an Affiliate"
+  },
+  "Testimonials": {
+    "title": "Real Success Stories",
+    "t1": "My sales increased by 300% in 3 months",
+    "t1Name": "Mohamed El-Rifai",
+    "t1Country": "Egypt",
+    "t2": "Expanded from Egypt to 5 countries seamlessly",
+    "t2Name": "Hanaa Al-Tamimi",
+    "t2Country": "Saudi Arabia",
+    "t3": "Didn't own a single product and made 100,000 Riyals profit",
+    "t3Name": "Ali Hassan",
+    "t3Country": "UAE"
+  },
+  "Flow": {
+    "title": "Start in Just 3 Steps",
+    "s1Title": "Register an Account",
+    "s1Desc": "Create your account for free (email + password)",
+    "s2Title": "Choose a Business Model",
+    "s2Desc": "Select Seller or Affiliate and receive program details",
+    "s3Title": "Start Selling",
+    "s3Desc": "Earn money immediately from day one",
+    "timeInfo": "⏱️ Takes only 1 minute!",
+    "btnStart": "Start Now - 100% Free"
+  },
+  "TechStack": {
+    "title": "Directly Supported Platforms",
+    "f1": "Open API for developers",
+    "f2": "Webhooks and Automations",
+    "f3": "Real-time sync",
+    "discoverAll": "Discover all compatible apps"
+  },
+  "CTA": {
+    "title": "🚀 Are you ready to turn your dream into reality?",
+    "desc1": "Join 20,000+ merchants who trust COD Network today.",
+    "desc2": "Start for free, no credit card required.",
+    "btn": "Create Your Free Account Now",
+    "q": "Question?",
+    "talk": "Talk to our team",
+    "or": "|",
+    "read": "Read Articles"
   }
 }

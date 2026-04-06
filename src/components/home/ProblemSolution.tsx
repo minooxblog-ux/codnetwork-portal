@@ -1,23 +1,26 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import styles from './ProblemSolution.module.css';
 
-const problems = [
-  { problem: "موردين متعددين ومُرهقين", solution: "مورد موحد موثوق", icon: "🤝" },
-  { problem: "شركات شحن بطيئة وغير آمنة", solution: "شحن سريع وآمن مضمون", icon: "🚚" },
-  { problem: "تأكيد الطلبات يدويّاً (تكلفة)", solution: "مراكز اتصال احترافية", icon: "📞" },
-  { problem: "نسبة مرتجعات عالية جداً", solution: "نسبة تأكيد 95%", icon: "✅" },
-  { problem: "تحصيل أموال معقد", solution: "محفظة رقمية فورية", icon: "💰" },
-  { problem: "لا رؤية على الأداء", solution: "لوحة تحكم ذكية", icon: "📊" }
-];
-
 export default function ProblemSolution() {
+  const t = useTranslations('ProblemSolution');
+
+  const problems = [
+    { problem: t('p1'), solution: t('s1'), icon: "🤝" },
+    { problem: t('p2'), solution: t('s2'), icon: "🚚" },
+    { problem: t('p3'), solution: t('s3'), icon: "📞" },
+    { problem: t('p4'), solution: t('s4'), icon: "✅" },
+    { problem: t('p5'), solution: t('s5'), icon: "💰" },
+    { problem: t('p6'), solution: t('s6'), icon: "📊" }
+  ];
+
   return (
     <section className="section">
       <div className="container">
         <div className={styles.header}>
           <h2 className="headline" style={{fontSize: '2.5rem', marginBottom: '1rem'}}>
-            كل هذه المشاكل... <span className="text-gradient">حلّها بسيط!</span>
+            {t('titlePrefix')} <span className="text-gradient">{t('titleGradient')}</span>
           </h2>
         </div>
         
@@ -25,7 +28,7 @@ export default function ProblemSolution() {
           {/* Column 1: Problems */}
           <div className={`glass-panel ${styles.colProblem}`}>
             <h3 className={styles.colTitle}>
-              <span className={styles.iconRef}>❌</span> مشاكل التاجر الحالية
+              <span className={styles.iconRef}>❌</span> {t('colProblemTitle')}
             </h3>
             <ul className={styles.list}>
               {problems.map((p, i) => (
@@ -49,13 +52,14 @@ export default function ProblemSolution() {
                initial={{ opacity: 0, scale: 0 }}
                whileInView={{ opacity: 1, scale: 1 }}
                viewport={{ once: true }}
-            >←</motion.span>
+               style={{ transform: 'scaleX(var(--rtl-scale, 1))' }}
+            >→</motion.span>
           </div>
 
           {/* Column 2: Solutions */}
           <div className={`glass-panel ${styles.colSolution}`}>
             <h3 className={styles.colTitle}>
-              <span className={styles.iconRef}>✅</span> حل COD Network
+              <span className={styles.iconRef}>✅</span> {t('colSolutionTitle')}
             </h3>
             <ul className={styles.list}>
               {problems.map((p, i) => (

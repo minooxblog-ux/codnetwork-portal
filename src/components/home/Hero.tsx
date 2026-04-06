@@ -1,8 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import styles from './Hero.module.css';
 
 export default function Hero() {
+  const t = useTranslations('Hero');
   return (
     <section className={styles.hero}>
       <div className={styles.background}>
@@ -16,8 +18,8 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="headline"
         >
-          نُمكّن الجميع من بدء، تنمية، وتوسيع إمبراطورية<br/>
-          <span className="text-gradient">التجارة الإلكترونية</span><br/> في الشرق الأوسط، إفريقيا، وما وراءهما 🚀
+          {t('headlinePrefix')}<br/>
+          <span className="text-gradient">{t('headlineGradient')}</span><br/> {t('headlineSuffix')}
         </motion.h1>
         
         <motion.p 
@@ -26,7 +28,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className={styles.subtitle}
         >
-          COD Network هي شريكك اللوجستي الموثوق. من المصنع إلى باب العميل، نحن نتكفل بكل شيء. أنت ركّز على ما تجيده أفضل: البيع والتسويق! 💼
+          {t('subtitle')}
         </motion.p>
         
         <motion.div 
@@ -35,8 +37,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className={styles.actions}
         >
-          <button className="btn-primary" style={{padding: '1rem 2.5rem', fontSize: '1.1rem'}}>ابدأ مجاناً الآن</button>
-          <button className={styles.btnSecondary}>شاهد الفيديو التوضيحي ▷</button>
+          <button className="btn-primary" style={{padding: '1rem 2.5rem', fontSize: '1.1rem'}}>{t('btnPrimary')}</button>
+          <button className={styles.btnSecondary}>{t('btnSecondary')}</button>
         </motion.div>
         
         <motion.div 
@@ -45,11 +47,11 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.6 }}
           className={`glass-panel ${styles.trustRibbon}`}
         >
-          <span>⭐ موثوق من قبل 20,000+ تاجر</span>
+          <span>{t('trustText')}</span>
           <span className={styles.dot}>•</span>
-          <span>⚡ متكامل مع 10+ منصات</span>
+          <span>{t('integrateText')}</span>
           <span className={styles.dot}>•</span>
-          <span>🌍 توصيل إلى 9 دول</span>
+          <span>{t('deliveryText')}</span>
         </motion.div>
       </div>
     </section>

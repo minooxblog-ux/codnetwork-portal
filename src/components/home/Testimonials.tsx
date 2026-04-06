@@ -1,16 +1,18 @@
 'use client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import styles from './Testimonials.module.css';
 
-const testimonials = [
-  { text: "زيادة مبيعاتي بـ 300% في 3 أشهر", name: "محمد الرفاعي", country: "مصر" },
-  { text: "توسعت من مصر إلى 5 دول بسهولة", name: "هناء التميمي", country: "السعودية" },
-  { text: "لم أملك منتج واحد وحققت 100,000 ريال أرباح", name: "علي حسن", country: "الإمارات" }
-];
-
 export default function Testimonials() {
+  const t = useTranslations('Testimonials');
   const [index, setIndex] = useState(0);
+
+  const testimonials = [
+    { text: t('t1'), name: t('t1Name'), country: t('t1Country') },
+    { text: t('t2'), name: t('t2Name'), country: t('t2Country') },
+    { text: t('t3'), name: t('t3Name'), country: t('t3Country') }
+  ];
 
   const nextTestimonial = () => setIndex((prev) => (prev + 1) % testimonials.length);
   const prevTestimonial = () => setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
@@ -18,7 +20,7 @@ export default function Testimonials() {
   return (
     <section className="section bg-card">
       <div className="container" style={{textAlign: 'center'}}>
-        <h2 className="headline text-center" style={{textAlign: 'center'}}>قصص نجاح حقيقية</h2>
+        <h2 className="headline text-center" style={{textAlign: 'center'}}>{t('title')}</h2>
         
         <div className={styles.carouselContainer}>
           <button className={styles.navBtn} onClick={prevTestimonial}>◀</button>

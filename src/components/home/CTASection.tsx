@@ -1,9 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 import styles from './CTASection.module.css';
 
 export default function CTASection() {
+  const t = useTranslations('CTA');
   return (
     <section className="section">
       <div className="container">
@@ -13,15 +15,15 @@ export default function CTASection() {
           viewport={{ once: true }}
           className={styles.ctaBox}
         >
-          <h2 className="headline" style={{marginBottom: '1rem'}}>🚀 هل أنت مستعد لتحويل حلمك إلى واقع؟</h2>
+          <h2 className="headline" style={{marginBottom: '1rem'}}>{t('title')}</h2>
           <p className={styles.desc}>
-            انضم إلى 20,000+ تاجر يثقون بـ COD Network اليوم.<br />
-            ابدأ مجاناً، بدون بطاقة ائتمان.
+            {t('desc1')}<br />
+            {t('desc2')}
           </p>
           <div className={styles.actions}>
-            <button className="btn-primary" style={{padding: '1rem 2rem', fontSize: '1.2rem'}}>أنشئ حسابك المجاني الآن</button>
+            <button className="btn-primary" style={{padding: '1rem 2rem', fontSize: '1.2rem'}}>{t('btn')}</button>
           </div>
-          <p className={styles.helpText}>سؤال؟ <Link href="/contact">تحدث مع فريقنا</Link> | <Link href="/blog">اقرأ المقالات</Link></p>
+          <p className={styles.helpText}>{t('q')} <Link href="/contact">{t('talk')}</Link> {t('or')} <Link href="/blog">{t('read')}</Link></p>
         </motion.div>
       </div>
     </section>

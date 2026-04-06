@@ -1,15 +1,17 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 import styles from './TechStack.module.css';
 
 const platforms = ['Shopify', 'YouCan', 'WooCommerce', 'Lightfunnels'];
 
 export default function TechStack() {
+  const t = useTranslations('TechStack');
   return (
     <section className="section bg-card">
       <div className="container" style={{textAlign: 'center'}}>
-        <h2 className="headline" style={{textAlign: 'center'}}>منصات مدعومة بشكل مباشر</h2>
+        <h2 className="headline" style={{textAlign: 'center'}}>{t('title')}</h2>
         
         <div className={styles.platforms}>
           {platforms.map((p, i) => (
@@ -27,12 +29,12 @@ export default function TechStack() {
         </div>
         
         <ul className={styles.featuresList}>
-          <li>API مفتوحة للمطورين</li>
-          <li>Webhooks و Automations</li>
-          <li>Real-time sync (مزامنة فورية)</li>
+          <li>{t('f1')}</li>
+          <li>{t('f2')}</li>
+          <li>{t('f3')}</li>
         </ul>
         <br/>
-        <Link href="/technology" className={styles.link}>اكتشف جميع التطبيقات المتوافقة</Link>
+        <Link href="/technology" className={styles.link}>{t('discoverAll')}</Link>
       </div>
     </section>
   );

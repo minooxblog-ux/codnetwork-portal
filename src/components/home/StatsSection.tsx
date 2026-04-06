@@ -1,17 +1,20 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import styles from './StatsSection.module.css';
 
-const stats = [
-  { val: '+20,000', label: 'عميل راضٍ' },
-  { val: '+500,000', label: 'طلب شهريّ' },
-  { val: '%95', label: 'معدل النجاح' },
-  { val: '+9', label: 'دول' },
-  { val: '+4', label: 'قارات' },
-  { val: '24/7', label: 'دعم فني' }
-];
-
 export default function StatsSection() {
+  const t = useTranslations('Stats');
+
+  const stats = [
+    { val: '+20,000', label: t('clients') },
+    { val: '+500,000', label: t('orders') },
+    { val: '%95', label: t('success') },
+    { val: '+9', label: t('countries') },
+    { val: '+4', label: t('continents') },
+    { val: '24/7', label: t('support') }
+  ];
+
   return (
     <section className="section">
       <div className="container">
@@ -34,7 +37,7 @@ export default function StatsSection() {
           </div>
           
           <div className={styles.partners}>
-            <span>شركاء موثوقون:</span>
+            <span>{t('partnersTitle')}</span>
             <div className={styles.logos}>
               <span className={styles.logoItem}>Shopify</span>
               <span className={styles.logoItem}>YouCan</span>
